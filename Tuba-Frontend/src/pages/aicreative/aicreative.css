@@ -1,0 +1,17 @@
+.aibox {
+    border-radius: 25px;
+    border: 10px rgb(0, 0, 0);
+	width: 300px;	
+    height: 100px;	
+    background-color: #ffffff;	
+    position: relative;
+    cursor: pointer;
+    box-shadow: 34px 30px 24px 15px rgba(3,66,92,0.45);
+    -webkit-box-shadow: 34px 30px 24px 15px rgba(3,66,92,0.45);
+    -moz-box-shadow: 34px 30px 24px 15px rgba(3,66,92,0.45);
+    transition: all 0.3s;
+}
+.aibox:hover{
+    box-shadow: none;
+    transform: translateY(5px);
+}

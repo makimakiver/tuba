@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  tuba-frontend:
+    build: ./tuba-frontend
+    container_name: tuba
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true

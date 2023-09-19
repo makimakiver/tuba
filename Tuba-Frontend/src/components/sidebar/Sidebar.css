@@ -1,0 +1,95 @@
+.Sidebar{
+    flex: 2.5;
+    display: flex;
+}
+/* LINE001 */
+
+.Sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    background-color: black;
+   
+  }
+  
+.Sidebar.open {
+    max-width: 370px;
+    transform: translateX(0);
+    background-color: black;
+}
+.sidebar{
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 25px;
+    color: white;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    flex-direction: column;
+    min-width: 370px;
+    border-radius: 20px;
+    margin: auto;
+}
+.sidebar:before {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: rgba(0,0,0,.1);
+    transform: translateX(-50%);
+}
+.sidebar:after {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+
+}
+.sidebar:hover{
+    opacity: 0.2;
+}
+.sidebar:hover:after {
+    transform: scale(1, 1);
+}
+/* .sidebar--open{
+    transform: translateX(0%);
+} */
+
+.sidebarList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* remove points */
+}
+/* .sidebaeListItem{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 4px 6px;
+    cursor: pointer;
+    border-radius: 10px;
+} */
+.sidebaeListItemText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left:-5px;
+    top: -10px;
+}
+.sidebarIcon{
+    font-size: 35px !important;
+    margin-right: 40px;
+}
+.title{
+    text-decoration: none;
+    outline: none;
+}

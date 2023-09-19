@@ -1,0 +1,74 @@
+.creationism{
+  display: flex;
+}
+.creationismRight{
+  display: flex;
+}
+.creationismRiRight{
+  display: flex;
+  flex: 6;
+}
+.creationismRight{
+  flex: 9.5;
+}
+.creationismCover{
+  height: 320px;
+  position: relative;
+}
+.creationismCoverImg{
+  margin: 0 auto;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.creationismImg{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: auto;
+  /* border: solid 3px white; */
+}
+.creationismInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.creationismInfoName{
+  font-size: 24px;
+}
+.creationismRightBottom{
+  display: flex;
+}
+.creationismInfo{
+  display: inline-block;
+  margin-top: 10px;
+}
+.creationOrder{
+  width: 300px;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+
+}
+.creationdesc{
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+}
+.creationUsername{
+  width: 400px;
+  height: 60px;
+  border-radius: 10px;
+}
+.creationprivate{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+.creation{
+  display: flex;
+  margin-top: 10px;
+  gap: 20px;
+}
+

@@ -1,0 +1,37 @@
+.chat{
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+    border-radius: 6px;
+    transition: .2s;
+}
+.chat:hover{
+    opacity: 0.4;
+}
+.chatCurrentMessage{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0px;
+}
+.friendInfo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+    margin-top: 9px ;
+}
+.friendAccountImg{
+    display: flex;
+    flex-direction: column;
+    width: 80px !important;
+    height: 80px !important;
+}
+.friendName{
+    margin-right: 40px;
+    font-size: 25px;
+    font-weight: 500;
+    font: italic;
+}
+.chatDate{
+    align-self: center;
+}

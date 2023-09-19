@@ -1,0 +1,64 @@
+.chatWrapper{
+    display: flex;
+}
+.chatRoom{
+    flex: 9.5;
+    display:flex;
+    justify-content: center;
+    border: 10px solid black;
+    max-height: 90vh;
+}
+.chatComponent{
+    flex: 7;
+    background-color: rgb(178, 178, 233);
+    border-radius: 10px;
+}
+.chatLeft{
+    margin-top: 10px;
+    flex: 2.5;
+}
+.chatRight{
+    flex: 7;
+    background-color: rgb(178, 178, 233);
+    border-radius: 10px;
+    position: relative;
+}
+.space{
+    margin: 10px;
+}
+.chatSearchbar{
+    top: -3px;
+    margin: 0 auto;
+    width: 80%;
+    height: 50px;
+    background-color: white;
+    border-radius: 25px;
+    border: solid 4px black;
+    display: flex;
+    align-items: center;
+    /* margin-right: 20px; */
+
+}
+.chatSearchIcon{
+    font-size: 20px !important;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.chatSearchInput{
+    border: none;
+    width: 100%;
+    height: 17.5px;
+    border-radius: 10px;
+}
+.chatSearchInput:focus{
+    outline: none;
+}
+.friendList{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.messageList{
+    padding: 10px;
+    overflow-y: scroll;
+}

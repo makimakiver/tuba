@@ -1,0 +1,44 @@
+.inputbar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.chatSend{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+.chatIcons{
+    width: 30px !important;
+    height: 30px !important;
+}
+.inputbarText{
+    width: 100%;
+    border: none;
+    bottom: 0;
+}
+.inputbarText:focus{
+    outline: none;
+}
+.chatSendButton {
+    background: #eee;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 160px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+}
+.chatSendButton:hover {
+    background: #313131;
+    color: #FFF;
+}

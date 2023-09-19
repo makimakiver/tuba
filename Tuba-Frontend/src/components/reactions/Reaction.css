@@ -1,0 +1,6 @@
+.reactionComponents{
+    display: inline-block;
+    flex: 7;
+    gap: 4px;
+    overflow-y: scroll;
+}
