@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/tuba/static/css/main.4f24fd90.css",
+    "main.js": "/tuba/static/js/main.f2f6f760.js",
+    "static/media/remixicon.svg?t=1690730386070": "/tuba/static/media/remixicon.db77551b8efc76571c4f.svg",
+    "static/media/fa-solid-900.svg": "/tuba/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
+    "static/media/fa-brands-400.svg": "/tuba/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
+    "static/media/remixicon.eot?t=1690730386070": "/tuba/static/media/remixicon.53ec05edb4b6864b45b1.eot",
+    "static/media/remixicon.ttf?t=1690730386070": "/tuba/static/media/remixicon.4aa0fd158658e2a40e79.ttf",
+    "static/media/fa-solid-900.eot": "/tuba/static/media/fa-solid-900.9bbb245e67a133f6e486.eot",
+    "static/media/fa-solid-900.ttf": "/tuba/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
+    "static/media/remixicon.woff?t=1690730386070": "/tuba/static/media/remixicon.affd60ca37df38cfee4f.woff",
+    "static/media/fa-regular-400.svg": "/tuba/static/media/fa-regular-400.4689f52cc96215721344.svg",
+    "static/media/remixicon.woff2?t=1690730386070": "/tuba/static/media/remixicon.821a773710130bcf4674.woff2",
+    "static/media/fa-brands-400.eot": "/tuba/static/media/fa-brands-400.23f19bb08961f37aaf69.eot",
+    "static/media/fa-brands-400.ttf": "/tuba/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
+    "static/media/fa-solid-900.woff": "/tuba/static/media/fa-solid-900.eeccf4f66002c6f2ba24.woff",
+    "static/media/fa-brands-400.woff": "/tuba/static/media/fa-brands-400.2285773e6b4b172f07d9.woff",
+    "static/media/fa-solid-900.woff2": "/tuba/static/media/fa-solid-900.1551f4f60c37af51121f.woff2",
+    "static/media/fa-brands-400.woff2": "/tuba/static/media/fa-brands-400.d878b0a6a1144760244f.woff2",
+    "static/media/fa-regular-400.eot": "/tuba/static/media/fa-regular-400.77206a6bb316fa0aded5.eot",
+    "static/media/fa-regular-400.ttf": "/tuba/static/media/fa-regular-400.491974d108fe4002b2aa.ttf",
+    "static/media/fa-regular-400.woff": "/tuba/static/media/fa-regular-400.bb58e57c48a3e911f15f.woff",
+    "static/media/fa-regular-400.woff2": "/tuba/static/media/fa-regular-400.7a3337626410ca2f4071.woff2",
+    "index.html": "/tuba/index.html",
+    "main.4f24fd90.css.map": "/tuba/static/css/main.4f24fd90.css.map",
+    "main.f2f6f760.js.map": "/tuba/static/js/main.f2f6f760.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f24fd90.css",
+    "static/js/main.f2f6f760.js"
+  ]
+}
