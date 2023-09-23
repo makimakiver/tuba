@@ -16,7 +16,6 @@ import {
 } from 'cdbreact';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../state/AuthContext'
-import {isOpen} from "/Users/yutak/EPQ-Project-Tuba/Tuba-Frontend/src/pages/home/home"
 
 
 
