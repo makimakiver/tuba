@@ -23,8 +23,9 @@ function Home() {
     </div>
   );
 };
-
 export default Home;
+
+console.log("helloncjhlj ")
 
 
 // npm update used

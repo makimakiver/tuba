@@ -119,6 +119,28 @@ router.get("/timeline/:id", async(req,res) => {
         if (teams == null){
             return res.status(200).json(userPost)
         } else {
+            let size = 0
+            let localminimum = 0
+            const all = await Post.find()
+            let pos = 0
+            let stack = []
+            for ( let i = 0; i<all.length ; i++){
+
+                if (all[i].tags != undefined ){
+                    let result = []
+                    let size = 0
+                    for ( let z = 0; z<all[i].tags.length; z++){
+                        size = size + (all[i].tags[z] * all[i].tags[z])
+                    }                   
+                    result.push(all[i]._id)
+                    result.push(size)
+                    stack.push(result)
+                }
+            }
+            console.log(stack[0][0])
+            let minima = stack
+            minima.sort();
+            console.log(minima)
             const friends = await Promise.all(
                 teams.followers.map((userId) => {
                     return User.findById(userId)
@@ -131,7 +153,6 @@ router.get("/timeline/:id", async(req,res) => {
                 timeline_post.push(friendPost)
                 }
             }
-            console.log(timeline_post)
 
             var merged = [].concat.apply([], timeline_post);
             var seenNames = {};

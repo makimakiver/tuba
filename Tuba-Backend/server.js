@@ -35,3 +35,7 @@ app.use("/api/otp", otpRoute);
 //     res.send(" can u hear me? ")
 // })
 app.listen(PORT, ()=> console.log("server is activated"));
+
+app.get("/", (req, res) => {
+    res.send('APP is running')
+})
