@@ -1,4 +1,5 @@
 const express = require("express");
+const fs = require('fs');
 const app = express();
 const postRoute = require("./routes/posts")
 const authRoute = require("./routes/auth")
