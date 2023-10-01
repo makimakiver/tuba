@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const Team = require("../models/Team")
-const AdminUser = require("../models/adminUser")
+const AdminUser = require("../models/AdminUser")
 const User = require("../models/User")
 
 router.post("/assemble", async (req, res) => {
