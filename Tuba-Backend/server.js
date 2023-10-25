@@ -32,7 +32,7 @@ app.use("/api/AI", AIRoute);
 app.use("/api/upload", uploadRoute);
 app.use("/api/otp", otpRoute);
 
-// app.get("/", (req,res) => {
-//     res.send(" can u hear me? ")
-// })
+app.get("/", (req,res) => {
+    res.send(" can u hear me? ")
+})
 app.listen(PORT, ()=> console.log("server is activated"));
