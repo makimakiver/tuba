@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "main": "index.js",
   "engines": {
+<<<<<<< HEAD
     "node": ">=14 <15"
+=======
+    "node": "18.x"
+>>>>>>> bcc145c838e5bc1fbb2952245af96891c9272112
   },
   "private": true,
   "dependencies": {
@@ -67,7 +71,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000/api",
+  "proxy": "https://tuba-tu.onrender.com/api",
   "devDependencies": {
     "@babel/core": "^7.22.19",
     "@babel/preset-env": "^7.22.15",

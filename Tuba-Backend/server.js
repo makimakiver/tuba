@@ -1,4 +1,5 @@
 const express = require("express");
+const fs = require('fs');
 const app = express();
 const postRoute = require("./routes/posts")
 const authRoute = require("./routes/auth")
@@ -33,7 +34,13 @@ app.use("/api/upload", uploadRoute);
 app.use("/api/otp", otpRoute);
 app.use("/api/chat", chatRoute);
 
+<<<<<<< HEAD
 // app.get("/", (req,res) => {
 //     res.send(" can u hear me? ")
 // })
+=======
+app.get("/", (req,res) => {
+    res.send(" can u hear me? ")
+})
+>>>>>>> bcc145c838e5bc1fbb2952245af96891c9272112
 app.listen(PORT, ()=> console.log("server is activated"));
