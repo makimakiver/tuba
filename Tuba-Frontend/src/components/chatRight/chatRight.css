@@ -1,0 +1,6 @@
+.chatRight{
+    flex: 7;
+    background-color: rgb(178, 178, 233);
+    border-radius: 10px;
+    position: relative;
+}
