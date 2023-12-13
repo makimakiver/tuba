@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { AuthContextProvider } from './state/AuthContext';
 import { useParams } from 'react-router-dom';
-import './index.css'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // the root is connected to the root component in the index html
