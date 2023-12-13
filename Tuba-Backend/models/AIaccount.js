@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const AIaccountSchema = new mongoose.Schema({
     AIname: {
         type: String,
@@ -33,12 +32,15 @@ const AIaccountSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
-    
-
+    prevCount:{
+        type: Number,
+        default: 0,       
+    },
+    count:{
+        type: Number,
+        default: 0,
+    }   
  },
-
  {timestamps: true }
-
 );
-
 module.exports = mongoose.model("AIaccount", AIaccountSchema);

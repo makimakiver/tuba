@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #313131;
 }
 .boxotpcontainer{
     flex-direction: column;
@@ -12,7 +11,6 @@
     margin-top: 20px;
     width: 50%;
     height: 60%;
-    background-color: rgb(170, 170, 170);
     border-radius: 10px;
 }
 .otpTitle{

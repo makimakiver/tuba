@@ -11,6 +11,7 @@ import Header from '../headerpost/Header';
 function Reactions() {
   const postid = useParams().postId;
   const [post, setPost] = useState({})
+  const flag = true
   useEffect(() => {
     const fetchPost = async () => {
       const response = await axios.get(`/posts/${postid}`)
@@ -35,7 +36,7 @@ function Reactions() {
       <>
       <div className="reactionComponents">
           <Header post={post} />
-          <Share />
+          <Share flag={postid}/>
       </div>
       </>
     )
@@ -45,7 +46,7 @@ function Reactions() {
       <>
       <div className="reactionComponents">
           <Header post={post}/>
-          <Share />
+          <Share flag={flag}/>
           <Comments/>
       </div>
       </>

@@ -17,41 +17,35 @@ function Creationism() {
   const desc = useRef();
   const sysprompt = useRef();
   const [isOuvrir, setIsOuvrir] = useState(false);
+  const [image, setImage] = useState(null)
   const toggle = () => setIsOuvrir(!isOuvrir);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(image)
+    const data = new FormData();
+    const imageName = Date.now() + image.name;
+    data.append("name", imageName)
+    data.append("image", image);
+    console.log("imagename:", imageName)
+    const ProfilePicture = imageName
+    const userId = user._id
+    const AIname = username.current.value
+    const Desc = desc.current.value
+    const systemPrompt = sysprompt.current.value
     try{
-      console.log(image)
-      console.log(AI)
-      const data = new FormData();
-      const imageName = Date.now() + image.name;
-      data.append("name", imageName)
-      data.append("image", image);
-      console.log(imageName)
-      const AI = {
-        ProfilePicture: image,
-        userId: user._id,
-        AIname: username.current.value,
-        Desc: desc.current.value,
-        systemPrompt: sysprompt.current.value,
-        ProfilePicture: imageName,
-      };
-      try{
-          await axios.post("/upload", data)
-      }catch(err){
-          console.log(err)
-      }
-      try {
-        await axios.post("/AI/creation", AI);
-        window.location.reload();
-        navigate("/museums");
-      }catch(err){
-        console.log(err);
-      }}catch(err){
+        await axios.post("/upload", data)
+    }catch(err){
         console.log(err)
-      }}
+    }
+    try {
+      await axios.post(`/AI/creation?userId=${userId}&AIname=${AIname}&Desc=${Desc}&systemPrompt=${systemPrompt}&ProfilePicture=${ProfilePicture}`);
+      window.location.reload();
+      navigate("/museums");
+    }catch(err){
+      console.log(err);
+    }}
+    
     const inputRef = useRef("null");
-    const [image, setImage] = useState(null)
     const handleImgClick = () => {
       inputRef.current.click();
     };
@@ -59,6 +53,9 @@ function Creationism() {
       const file = event.target.files[0];
       console.log(file);
       setImage(file)
+  
+      const imageName = Date.now() + file.name;
+      console.log(imageName)
     }    
   return (
     <>

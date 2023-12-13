@@ -8,22 +8,20 @@ function Header({ post }) {
     const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER
     
     const [user, setUser] = useState({}) 
-    console.log(post)
-
     useEffect(() => {
+        const fetchUser = async () => {
         try{
-            const fetchUser = async () => {
             const response = await axios.get(`/users/${post.userId}`)
             setUser(response.data)
+            console.log("from user data: ", response.data)
             // set user will add response data to Posts constant
-            };
+            }catch(err){
+                console.log(err)
+            }
             fetchUser()
         }
-        catch(err){
-            console.log(err)
-        }
-      }, []);
-      console.log(user)
+      }, [post]);
+      console.log("hello user: ", user)
   return (
     <div className="post">
         <div className="postWrapper">

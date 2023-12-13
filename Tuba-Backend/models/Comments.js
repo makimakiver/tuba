@@ -18,11 +18,6 @@ const CommentsSchema = new mongoose.Schema({
         type: String,
         default:"",
     },
-    // Username: {
-    //     type: String,
-    //     default: "",
-    //     required: true,
-    // },
     tags: {
         type: Array,
         default: [],

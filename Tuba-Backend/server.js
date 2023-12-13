@@ -7,6 +7,7 @@ const teamRoute = require("./routes/team")
 const AIRoute = require("./routes/AI")
 const uploadRoute = require("./routes/upload")
 const otpRoute = require("./routes/otp")
+const chatRoute = require("./routes/Chat")
 const path = require("path")
 const PORT = 5000;
 const mongoose = require("mongoose");
@@ -30,12 +31,9 @@ app.use("/api/team", teamRoute);
 app.use("/api/AI", AIRoute);
 app.use("/api/upload", uploadRoute);
 app.use("/api/otp", otpRoute);
+app.use("/api/chat", chatRoute);
 
 // app.get("/", (req,res) => {
 //     res.send(" can u hear me? ")
 // })
 app.listen(PORT, ()=> console.log("server is activated"));
-
-app.get("/", (req, res) => {
-    res.send('APP is running')
-})

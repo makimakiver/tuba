@@ -18,7 +18,7 @@
     margin-top: 20px;
     align-items: center;
     justify-content: center;
-    background: #eee;
+    background: #7272B8;
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -26,12 +26,12 @@
     margin: 0 auto;
     max-width: 300px;
     padding: 10px 25px;
-    color: #313131;
+    color: #000000;
     transition: 0.3s ease-in-out;
     font-weight: 500;
 }
 .contentWrapper:hover {
-    background: #edf6ff;
+    background: #0080ff;
 }
 .contentWrapper:before, .contentWrapper:after {
   content: "";

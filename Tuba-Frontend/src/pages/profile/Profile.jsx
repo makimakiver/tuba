@@ -32,6 +32,7 @@ function Profile() {
     else{
       const fetchUsers = async () => {
         const response = await axios.get(`/users?username=${username}`)
+        console.log(response.data)
         setUsers(response.data)
         // set user will add response data to Posts constant
       };

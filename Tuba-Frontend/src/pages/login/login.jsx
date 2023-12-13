@@ -13,33 +13,33 @@ function Login() {
   const { user, isFetchng, error, dispatch } = useContext(AuthContext)
   const handleSubmit = (e) => {
     e.preventDefault();
+    // add functionality which check whether user exist or not
     loginCall({
       email: email.current.value,
       password: password.current.value,
     },
     dispatch
     );
+    navigate(`/verification/${email.current.value}`);
   }
-  navigate(`/verification/${email.current.value}`);
 
 
   return (
     <div className='login'>
       <div className="loginWrapper">
         <div className="loginleft">
-          <h1 className='loginTitle'>Tuba</h1>
-          <p className="to-connect"> to connect</p>
-        </div>
-        <div className="loginRight" onSubmit={(e) => handleSubmit(e)}>
-          <form className="loginBox">
-            <p className="loginMsg">login from here</p>
+          <div className="loginLogo">
+            Tuba
+          </div>
+          <form className="loginBox" onSubmit={(e) => handleSubmit(e)}>
+            <div className="loginMsg">login from here</div>
             <input type="email" className='loginInput' placeholder='Email' required ref={email}/>
             <input type="password" className='loginInput' placeholder='password' required minLength={8} ref={password}/>
             <button className='loginButton' >login</button>
-            <span className="loginEorgot">did you forget your password?</span>
-            <Link to="/register"  style={{textDecoration: "none", color: "black"}}> 
-              <button className="loginRegisterButton">create an Account</button>
-            </Link>
+            <hr class="hr-text" data-content="If you do not have an account"/>
+              <Link to="/register"  style={{textDecoration: "none", color: "black"}}> 
+                <button className="loginRegisterButton">create an Account</button>
+              </Link>
             {/* {user ? (
               <>
               <UserInfo />

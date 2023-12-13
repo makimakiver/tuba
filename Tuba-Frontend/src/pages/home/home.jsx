@@ -10,8 +10,7 @@ function Home() {
   
   const [isOuvrir, setIsOuvrir] = useState(false);
   const toggle = () => setIsOuvrir(!isOuvrir);
-  console.log(isOuvrir);
-  
+   
   return (
     <div>
       <Topbar toggle={toggle}/>
@@ -25,7 +24,6 @@ function Home() {
 };
 export default Home;
 
-console.log("helloncjhlj ")
 
 
 // npm update used

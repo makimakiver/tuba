@@ -54,12 +54,11 @@ function OneTimePad() {
         dispatch
       );
       console.log(user);
-      // }else{
-      //   setTimeout(() => {
-      //     setShowAlert(true)
-      //   }, 2000);
+      }else{
+        setTimeout(() => {
+          setShowAlert(true)
+        }, 2000);
       
-    } else {
     }
   };
   return (

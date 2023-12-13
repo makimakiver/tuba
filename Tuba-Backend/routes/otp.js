@@ -41,7 +41,8 @@ router.post("/send", async (req,res) => {
                 from: "yutaka3209@gmail.com",
                 to: req.body.email,
                 subject: "your otp",
-                html: `<p>We greatly appreciate your decision to sign in to Tuba, our secure and user-friendly website. For enhanced security, we have generated a one-time pad key exclusively for you, which is displayed below:</p><p style="color: tomato; font-size:25px; "><b>${one_time_pad_key}</b></p>`,
+                html: `<p>We greatly appreciate your decision to sign in to Tuba, our secure and user-friendly website. For enhanced security,
+                 we have generated a one-time pad key exclusively for you, which is displayed below:</p><p style="color: tomato; font-size:25px; "><b>${one_time_pad_key}</b></p>`,
             }
             const sendEmail = async (mailOptions) => {
                 try{
@@ -104,5 +105,4 @@ router.delete("/:id", async (req, res) => {
         return res.status(500).json(err)
     }  
 });
-
 module.exports = router;

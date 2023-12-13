@@ -1,11 +1,13 @@
 .share{
-    margin: 0 auto;
+    background-color: white;
+    margin: 10px auto;
     width: 80%;
     height: 190px;
     box-shadow: 3px 7px 13px -10px blue;
     border-radius: 10px;
 }
 .shareWrapper{
+    margin-top: 10px;
     padding: 10px;
 }
 .shareTop {

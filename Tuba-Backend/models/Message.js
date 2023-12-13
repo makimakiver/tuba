@@ -2,17 +2,25 @@ const mongoose = require("mongoose");
 
 const MessageSchema = new mongoose.Schema({
     message: {
-        type: Text,
+        type: String,
         required: true,
     },
-    users: {
-        type: Array,
-        default: [],
+    userId: {
+        type: String,
+        default: "",
     },
     sender: {
-        type: Object,
+        type: String,
+        default: "",
+    },
+    AIID:{
+        type: String,
+        default: "",
+    },
+    messageId:{
+        type: String,
+        default: "",
     }
-
  },
 
  {timestamps: true }

@@ -4,12 +4,12 @@ import { Face, Gif, Image, Send } from '@mui/icons-material'
 import { AuthContext } from '../../state/AuthContext'
 import axios from 'axios'
 
-function Share() {
+function Share({ flag }) {
+    console.log("flag variable: ", flag)
     const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER
     const {user} = useContext(AuthContext)
     const desc = useRef();
     const [file, setFile] = useState(null);
-    console.log(file)
     const handleSubmit = async (e) => {
         e.preventDefault();
         const newPost = {
@@ -31,8 +31,13 @@ function Share() {
             }
         }
         try {
-            await axios.post("/posts", newPost);
-            window.location.reload();
+            if (flag){
+                await axios.post(`/posts/${flag}/comment`, newPost);
+                window.location.reload();
+            }else{
+                await axios.post("/posts", newPost);
+                window.location.reload();
+            }
         }catch(err) {
             console.log(err);
         }

@@ -81,21 +81,21 @@ return stored_password;
 router.post("/creation", async (req, res) => {
     // HTTP post request is used 
         try{
-            if (!req.body.AIname || !req.body.userId){
+            if (!req.query.AIname || !req.query.userId){
                 return res.status(500).json("error as you dont put anything")
             }
             else{
                 const newAI = await new AIaccount({
-                    userId: req.body.userId,
-                    AIname: req.body.AIname,
-                    systemPrompt: req.body.systemPrompt,
-                    Desc: req.body.desc,
-                    ProfilePicture: req.body.ProfilePicture,
+                    userId: req.query.userId,
+                    AIname: req.query.AIname,
+                    systemPrompt: req.query.systemPrompt,
+                    Desc: req.query.desc,
+                    ProfilePicture: req.query.ProfilePicture,
                 });
                 const AI = await newAI.save();
         
                 const newAuthorized = new Authorized({
-                    users: req.body.userId,
+                    users: req.query.userId,
                     AIId: AI._id,
                 });            
                 const AuthorizedUser = await newAuthorized.save();
@@ -103,7 +103,7 @@ router.post("/creation", async (req, res) => {
                 // const newKey = await new Key({
                 //     userId: AI._id,
                 //     key_code: keycode,
-                //     second: decription(keycode, NaturalXOR(req.body.password)),
+                //     second: decription(keycode, NaturalXOR(req.query.password)),
                 //     human: false,
                 // });
                 // const AIkey = await newKey.save();
@@ -239,7 +239,7 @@ router.delete("/:id", async (req, res) => {
 router.get("/all", async (req, res) => {
     // HTTP post request
         try{
-            const account = await AIaccount.find({ IsPrivate: false})
+            const account = await AIaccount.find({ IsPrivate: false })
             return res.status(200).json(account)         
         } catch(err) {
             return res.status(500).json(err)

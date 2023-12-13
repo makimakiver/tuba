@@ -1,6 +1,5 @@
 import Topbar from '../../components/topbar/Topbar'
 import Sidebar from '../../components/sidebar/Sidebar'
-import Timeline from '../../components/timeline/TimeLine'
 import Rightbar from '../../components/rightbar/Rightbar'
 import React, { useEffect, useState } from 'react'
 import "./AIaccount.css"
@@ -76,9 +75,11 @@ function AIaccount() {
           </div>
         </div>
         <div className="aiprofileRigtBottom">
-          <Timeline />
-          <Rightbar /> 
+          <div>system prompt: 
+            <div className='system'>{chatbot.systemPrompt}</div>
+          </div>
         </div>
+        <Rightbar /> 
       </div>
     </div> 
     </>

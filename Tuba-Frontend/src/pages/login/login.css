@@ -1,45 +1,53 @@
 .login{
     width: 100vw;
-    height: 100vh;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .loginWrapper{
     width: 70%;
-    height: 70%;
-    display: flex;
-}
-.loginleft,
-.loginRight{
-    flex: 1;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}  
-
+}
+.loginleft{
+    font-size: 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .loginLogo{
-   font-size: 50px;
-   font-weight: 800;
+   font-size: 100px;
+   font-style: normal;
    color: black;
    margin-bottom: 10px;
+   text-align: center;
+   flex-direction: column;
+   display: flex;
 }
-.loginDesc {
-    font-size: 24px;
+.loginMsg{
+    text-align: center;
+    font-size: 20px;
 }
 .loginBox{
+    align-self: center;
+    margin: auto;
+    height: 900px;
+    width: 50%;
     padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 5px;
     justify-content: space-around;
 }
 .loginInput{
-    height: 50px;
+    height: 90px;
     border-radius: 10px;
-    border: 1px solid ;
     font-size: 18px;
     padding-left: 20px;
+    margin-bottom: 20px;
 }
 .loginButton{
     height: 50px;
@@ -58,9 +66,9 @@
 .loginForgot{
     text-align: center;
 }
-.loginRegisterButton{
+.loginButton{
     height: 50px;
-    width: 100%;
+    width: 50%;
     align-self: center;
     justify-content: center;
     border-radius: 10px;
@@ -71,7 +79,39 @@
     font-weight: 500;
     cursor: pointer;
     transition: 0.5 ease-in-out;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
-.loginRegisterButton:hover{
+.loginButton:hover{
     background-color: black;
 }
+.hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: .5;
+    &:before {
+      content: '';
+      background: linear-gradient(to right, transparent, #818078, transparent);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+    }
+    &:after {
+      content: attr(data-content);
+      position: relative;
+      display: inline-block;
+      color: black;
+  
+      padding: 0 .5em;
+      line-height: 1.5em;
+      color: #818078;
+      background-color: #fcfcfa;
+    }
+  }

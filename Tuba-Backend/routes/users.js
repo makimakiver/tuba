@@ -4,6 +4,7 @@ const User = require("../models/User");
 const Team = require("../models/Team");
 const nodemailer = require("nodemailer");
 const bcrypt = require("bcrypt")
+const { OpenAIApi, Configuration, default: OpenAI, } = require("openai");
 // const  {XorAscii, ValueToChar, decription, NaturalXOR} = require("./auth");
 
 
@@ -131,15 +132,36 @@ router.put("/:id", async (req, res) => {
         // only if userID is same as theie userID.
         try{
             if (!req.body.password){
-                const user = await User.findByIdAndUpdate(req.params.id, {
+                if (req.body.Desc){
+                    const openai = new OpenAI({
+                        apiKey: process.env.OpenAI,
+                    });
+                    console.log(openai)
+                    const embeddingResponse = await openai.embeddings.create({
+                        model: 'text-embedding-ada-002',
+                        input: req.body.Desc
+                    })
+                    const one_post_vector_data = embeddingResponse.data[0].embedding;
+                    const user = await User.findByIdAndUpdate(req.params.id, {
+                            username: req.body.username,
+                            Desc: req.body.Desc,
+                            ProfilePicture: req.body.ProfilePicture,
+                            IsPrivate: req.body.IsPrivate,
+                            IsPicturePrivate: req.body.IsPicturePrivate,
+                            email: req.body.email,    
+                            tags: one_post_vector_data,            
+                        // apart from password user can change any user information as they want
+                    });
+                }else {
+                    const user = await User.findByIdAndUpdate(req.params.id, {
                         username: req.body.username,
-                        Desc: req.body.Desc,
                         ProfilePicture: req.body.ProfilePicture,
                         IsPrivate: req.body.IsPrivate,
                         IsPicturePrivate: req.body.IsPicturePrivate,
-                        email: req.body.email,                    
+                        email: req.body.email,  
                     // apart from password user can change any user information as they want
-                });
+                    });
+                }
                 return res.status(200).json("your account is updated. enjoy!") 
             } else {
                 return res.status(500).json("you cannot change your password in this section sorry.")
@@ -173,6 +195,7 @@ router.get("/:id", async (req, res) => {
     // HTTP post request    
     try{
         const user = await User.findById(req.params.id);
+        console.log(user)
         if (user.IsPrivate == true){
             const { password, email, updatedAt, BelongTo, Desc, ...others} = user._doc;
             res.status(200).json(others) 

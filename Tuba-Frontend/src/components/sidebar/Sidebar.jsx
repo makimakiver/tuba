@@ -52,19 +52,14 @@ function Sidebar({isOuvrir}) {
         link: `/profile/${user.username}`
     },
     {
-        title: "Teams",
-        icon: <GroupRounded />,
-        link: "/"
-    },
-    {
         title: "Trends",
         icon: <TrendingUp />,
-        link: "/"
+        link: "/trending"
     },
   ]
 
   return (
-    <div style={{width: isOuvrir ? "100%": "50px"}} className={`Sidebar ${isOuvrir ? 'open': ''}`}>
+    <div style={{width: isOuvrir ? "100%": "0px"}} className={`Sidebar ${isOuvrir ? 'open': ''}`}>
       <div className="sidebarWrapper">
           {
             menuItem.map((item, index) =>(

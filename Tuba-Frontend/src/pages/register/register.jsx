@@ -43,7 +43,7 @@ function Register() {
             <input type="password" className='registerInput' placeholder='Password' required minLength={6} ref={password}/>
             <input type="password" className='registerInput' placeholder='Confirmation' required ref={confirmation}/>
             <button className='registerButton' type='submit'>Sign up</button>
-            <hr class="hr-text" data-content="If you do not have an account"/>
+            <hr class="hr-text" data-content="If you have an account"/>
             <Link to="/login"  style={{textDecoration: "none", color: "black"}}>
               <button className="registerRegisterButton" >Login to your Account</button>
             </Link>
@@ -64,30 +64,30 @@ function Register() {
 
 export default Register
 
-function SignInButton() {
-  const signInWithGoogle = () => {
-      signInWithPopup(auth, provider)
-  };
-  return (
-      <button onClick={ signInWithGoogle }>Login with Google</button>
-  )
-}
+// function SignInButton() {
+//   const signInWithGoogle = () => {
+//       signInWithPopup(auth, provider)
+//   };
+//   return (
+//       <button onClick={ signInWithGoogle }>Login with Google</button>
+//   )
+// }
 
-function SignOutButton() {
+// function SignOutButton() {
   
-  return (
-      <button onClick={() => auth.signOut()}>
-        signOut
-      </button>
-  )
-}
+//   return (
+//       <button onClick={() => auth.signOut()}>
+//         signOut
+//       </button>
+//   )
+// }
 
-function UserInfo(){
-  return (
-      <div className='userInfo'>
-        <img src={auth.currentUser.photoURL} alt="" />
-        <p>{auth.currentUser.displayName}</p>
+// function UserInfo(){
+//   return (
+//       <div className='userInfo'>
+//         <img src={auth.currentUser.photoURL} alt="" />
+//         <p>{auth.currentUser.displayName}</p>
       
-      </div>
-  )
-}
+//       </div>
+//   )
+// }

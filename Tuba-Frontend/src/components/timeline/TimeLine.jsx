@@ -9,15 +9,18 @@ import { AuthContext } from '../../state/AuthContext';
 function Timeline({ username }) {
   const [posts, setPosts] = useState([]);
   const { user } = useContext(AuthContext);
+  console.log(user)
   useEffect(() => {
     const fetchPosts = async () => {
       const response = username ? await axios.get(`/posts/profile/timeline/${username}`) 
       :await axios.get(`/posts/timeline/${user._id}`)
+      console.log("RESPONSE: ", response.data)
       setPosts(response.data)
       // set post will add response data to Posts constant
     };
     fetchPosts()
   }, [username, user._id]);
+  console.log("RESPONSE: ", posts)
   if(user.username === username || typeof(username)==="undefined"){
   return (
     <div className="timeline">

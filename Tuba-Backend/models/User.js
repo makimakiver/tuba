@@ -44,7 +44,14 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
-
+    Conversation: {
+        type: Array,
+        default: [],
+    }, 
+    tags: {
+        type: Array, 
+        default: [],
+    }, 
  },
 
  {timestamps: true }

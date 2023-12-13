@@ -52,7 +52,7 @@ function AI({bot}) {
                 <div className="chatbotMiddle">        
                     <div className="chatbotDescIntro">
                         <div className='In'>Description</div>
-                        <div className="chatbotDesc">{bot.Desc}</div>
+                        <div className="chatbotDesc">{bot.Desc ? bot.Desc: ""}</div>
                         <BsChevronDown className='chatbotDescIcon'/>
                     </div>
                 </div>    

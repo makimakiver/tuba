@@ -15,15 +15,12 @@ import PuffLoader from "react-spinners/ClipLoader";
 import "./App.css"
 import Creationism from "./pages/createAI/Creationism";
 import OneTimePad from "./pages/one-time-pad-key/otp";
+import Trending from "./pages/Trending/trending"
 
 function App() {
   const override: CSSProperties = {
-    display: "flex",
-    margin: "auto",
     borderColor: "red",
-    bottom: "50%",
-    alignItems: "center",
-    fontsize: "100px",
+
   };
   const { user } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
@@ -32,22 +29,25 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 8000)
+    }, 30)
   }, [])
   return (
-    <div>
+    <div className="App">
     {
       loading ?
-      
-      <PuffLoader
-      cssOverride={override}
-      color="black"
-      speedMultiplier={1.2}
-      />
+      <div className="loader">
+        <PuffLoader
+        cssOverride={override}
+        color="black"
+        speedMultiplier={1.2}
+        size={200}
+        />
+        <div className="loading">Now, It is loading ...</div>
+      </div>
     : 
      <BrowserRouter>
             <Routes>
-              <Route path="/register" element={user ? <Navigate to="/verification" /> : <Register />} />
+              <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/" element={user ? <Home/>: <Register />} />
               <Route path="/museums" element={<AIcreative />} />
@@ -58,7 +58,8 @@ function App() {
               <Route path="/aicreationism" element={<Creationism/>}/>
               <Route path="/edit/:username" element={<Edition/>}/>
               <Route path="/comment/:postId" element={<Comment/>}/>
-              <Route path="/verification/:email" element={user ? <Navigate to="/" /> : <OneTimePad />} />
+              <Route path="/trending" element={<Trending/>}/>
+              <Route path="/verification/:email" element={user ? <Home/> : <OneTimePad/>} />
             </Routes>
       </BrowserRouter>
       
